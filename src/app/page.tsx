@@ -1,3 +1,4 @@
+
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
@@ -6,13 +7,8 @@ import { WhatsAppButton } from "@/components/chat/WhatsAppButton";
 import { SupportBot } from "@/components/chat/SupportBot";
 import { Card } from "@/components/ui/card";
 import { ShieldCheck, Truck, Clock, Headphones } from "lucide-react";
-import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function Home() {
-  const doctorImg = PlaceHolderImages.find(img => img.id === 'doctor-consultation');
-  const bloodTestImg = PlaceHolderImages.find(img => img.id === 'lab-test');
-
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -65,25 +61,19 @@ export default function Home() {
 
           <section className="py-16">
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-8 border-none bg-gradient-to-br from-blue-600 to-blue-800 text-white relative overflow-hidden group">
-                <div className="relative z-10 space-y-4 max-w-sm">
-                  <h2 className="text-3xl font-bold">Online Doctor Consultation</h2>
-                  <p className="text-blue-100 text-sm">Consult with India's top doctors across 20+ specialties from home.</p>
-                  <button className="bg-white text-blue-700 px-6 py-2 rounded-full font-bold hover:bg-blue-50 transition-colors">Book Now</button>
-                </div>
-                <div className="absolute right-0 bottom-0 opacity-20 group-hover:scale-110 transition-transform duration-500">
-                  <Image src={doctorImg?.imageUrl || ""} alt="Doctor" width={250} height={250} className="object-contain" data-ai-hint="doctor consultation" />
+              <Card className="p-10 border-none bg-gradient-to-br from-blue-600 to-blue-800 text-white relative overflow-hidden group">
+                <div className="relative z-10 space-y-4">
+                  <h2 className="text-4xl font-bold">Online Doctor Consultation</h2>
+                  <p className="text-blue-100 text-lg max-w-md">Consult with India's top doctors across 20+ specialties from the comfort of your home.</p>
+                  <button className="bg-white text-blue-700 px-8 py-3 rounded-2xl font-bold hover:bg-blue-50 transition-colors shadow-lg">Book Now</button>
                 </div>
               </Card>
 
-              <Card className="p-8 border-none bg-gradient-to-br from-teal-600 to-teal-800 text-white relative overflow-hidden group">
-                <div className="relative z-10 space-y-4 max-w-sm">
-                  <h2 className="text-3xl font-bold">Full Body Blood Test</h2>
-                  <p className="text-teal-100 text-sm">Safe home sample collection for 500+ blood tests and profiles.</p>
-                  <button className="bg-white text-teal-700 px-6 py-2 rounded-full font-bold hover:bg-teal-50 transition-colors">View Tests</button>
-                </div>
-                <div className="absolute right-0 bottom-0 opacity-20 group-hover:scale-110 transition-transform duration-500">
-                  <Image src={bloodTestImg?.imageUrl || ""} alt="Blood Test" width={250} height={250} className="object-contain" data-ai-hint="blood test" />
+              <Card className="p-10 border-none bg-gradient-to-br from-teal-600 to-teal-800 text-white relative overflow-hidden group">
+                <div className="relative z-10 space-y-4">
+                  <h2 className="text-4xl font-bold">Full Body Blood Test</h2>
+                  <p className="text-teal-100 text-lg max-w-md">Safe home sample collection for 500+ blood tests and comprehensive health profiles.</p>
+                  <button className="bg-white text-teal-700 px-8 py-3 rounded-2xl font-bold hover:bg-teal-50 transition-colors shadow-lg">View Tests</button>
                 </div>
               </Card>
             </div>
