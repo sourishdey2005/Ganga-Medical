@@ -11,7 +11,7 @@ export function Footer() {
               <div className="bg-primary p-1.5 rounded-md">
                 <span className="text-white font-bold text-xl tracking-tight">G</span>
               </div>
-              <span className="font-bold text-xl text-primary">GangaRx</span>
+              <span className="font-bold text-xl text-primary">Ganga Medical</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Ganga Medical Store is committed to providing genuine medicines and reliable healthcare services. Your health is our priority.
@@ -67,7 +67,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary shrink-0" />
-                <span>support@gangarx.com</span>
+                <span>support@gangamedical.com</span>
               </li>
             </ul>
           </div>

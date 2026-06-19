@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'GangaRx | Trust-Inspired Digital Pharmacy',
+  title: 'Ganga Medical | Trust-Inspired Digital Pharmacy',
   description: 'Ganga Medical Store - Your reliable online pharmacy for prescription medicines, health consultations, and lab tests.',
 };
 

@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState } from "react"
@@ -14,8 +13,8 @@ import { useToast } from "@/hooks/use-toast"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 
 const HARDCODED_CREDENTIALS = [
-  { email: "admin@gangarx.com", password: "admin123", role: "admin", name: "System Admin" },
-  { email: "pharmacy@gangarx.com", password: "pharmacy123", role: "pharmacy", name: "Ganga Central Pharmacy" }
+  { email: "admin@gangamedical.com", password: "admin123", role: "admin", name: "System Admin" },
+  { email: "pharmacy@gangamedical.com", password: "pharmacy123", role: "pharmacy", name: "Ganga Central Pharmacy" }
 ]
 
 export default function LoginPage() {
@@ -82,7 +81,7 @@ export default function LoginPage() {
                     <Input 
                       id="email" 
                       type="email" 
-                      placeholder="name@gangarx.com" 
+                      placeholder="name@gangamedical.com" 
                       className="pl-9 h-11"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -116,12 +115,12 @@ export default function LoginPage() {
                   <div className="grid grid-cols-2 gap-2 text-[10px]">
                     <div>
                       <p className="font-bold">Admin:</p>
-                      <p>admin@gangarx.com</p>
+                      <p>admin@gangamedical.com</p>
                       <p>admin123</p>
                     </div>
                     <div>
                       <p className="font-bold">Pharmacy:</p>
-                      <p>pharmacy@gangarx.com</p>
+                      <p>pharmacy@gangamedical.com</p>
                       <p>pharmacy123</p>
                     </div>
                   </div>

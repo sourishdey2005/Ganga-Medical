@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from "next/link"
@@ -35,7 +34,7 @@ export function Navbar() {
             <div className="bg-primary p-1.5 rounded-md transition-transform group-hover:scale-105">
               <span className="text-white font-bold text-xl tracking-tight">G</span>
             </div>
-            <span className="font-bold text-xl text-primary hidden md:block">GangaRx</span>
+            <span className="font-bold text-xl text-primary hidden md:block">Ganga Medical</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-muted-foreground">
