@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-medical",
+      "description": "Professional medical pharmacy interior with pharmacists",
+      "imageUrl": "https://picsum.photos/seed/med1/1200/600",
+      "imageHint": "pharmacy medicines"
+    },
+    {
+      "id": "doctor-consultation",
+      "description": "Professional doctor in consultation",
+      "imageUrl": "https://picsum.photos/seed/doc1/600/400",
+      "imageHint": "doctor consultation"
+    },
+    {
+      "id": "lab-test",
+      "description": "Medical lab testing equipment",
+      "imageUrl": "https://picsum.photos/seed/lab1/600/400",
+      "imageHint": "medical laboratory"
+    },
+    {
+      "id": "medicine-bottle",
+      "description": "Generic medicine bottles",
+      "imageUrl": "https://picsum.photos/seed/med2/400/400",
+      "imageHint": "medicine bottle"
+    }
+  ]
 }
