@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
@@ -8,8 +7,12 @@ import { SupportBot } from "@/components/chat/SupportBot";
 import { Card } from "@/components/ui/card";
 import { ShieldCheck, Truck, Clock, Headphones } from "lucide-react";
 import Image from "next/image";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function Home() {
+  const doctorImg = PlaceHolderImages.find(img => img.id === 'doctor-consultation');
+  const bloodTestImg = PlaceHolderImages.find(img => img.id === 'lab-test');
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -69,7 +72,7 @@ export default function Home() {
                   <button className="bg-white text-blue-700 px-6 py-2 rounded-full font-bold hover:bg-blue-50 transition-colors">Book Now</button>
                 </div>
                 <div className="absolute right-0 bottom-0 opacity-20 group-hover:scale-110 transition-transform duration-500">
-                  <Image src="https://picsum.photos/seed/doc2/400/400" alt="Doctor" width={250} height={250} className="object-contain" />
+                  <Image src={doctorImg?.imageUrl || ""} alt="Doctor" width={250} height={250} className="object-contain" data-ai-hint="doctor consultation" />
                 </div>
               </Card>
 
@@ -80,7 +83,7 @@ export default function Home() {
                   <button className="bg-white text-teal-700 px-6 py-2 rounded-full font-bold hover:bg-teal-50 transition-colors">View Tests</button>
                 </div>
                 <div className="absolute right-0 bottom-0 opacity-20 group-hover:scale-110 transition-transform duration-500">
-                  <Image src="https://picsum.photos/seed/blood-test-2/400/400" alt="Blood Test" width={250} height={250} className="object-contain" data-ai-hint="blood test" />
+                  <Image src={bloodTestImg?.imageUrl || ""} alt="Blood Test" width={250} height={250} className="object-contain" data-ai-hint="blood test" />
                 </div>
               </Card>
             </div>
