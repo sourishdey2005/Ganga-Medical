@@ -1,8 +1,7 @@
-
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { FileUp } from "lucide-react"
+import { FileUp, Video } from "lucide-react"
 import Link from "next/link"
 
 export function Hero() {
@@ -34,9 +33,10 @@ export function Hero() {
                 Upload Prescription
               </Button>
             </Link>
-            <Link href="/catalog">
-              <Button variant="outline" size="lg" className="h-16 px-10 text-lg font-semibold border-2 border-primary text-primary hover:bg-primary/5 rounded-2xl">
-                Order Medicines
+            <Link href="/consultation/video">
+              <Button variant="outline" size="lg" className="h-16 px-10 text-lg font-semibold border-2 border-primary text-primary hover:bg-primary/5 rounded-2xl gap-2">
+                <Video className="w-6 h-6" />
+                Consult Pharmacist
               </Button>
             </Link>
           </div>

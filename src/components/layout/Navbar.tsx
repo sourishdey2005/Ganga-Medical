@@ -1,8 +1,7 @@
-
 "use client"
 
 import Link from "next/link"
-import { Search, ShoppingCart, User, Menu, Phone, LayoutDashboard, LogOut } from "lucide-react"
+import { Search, ShoppingCart, User, Menu, Phone, LayoutDashboard, LogOut, Video } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useState, useEffect } from "react"
@@ -42,7 +41,10 @@ export function Navbar() {
 
           <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-muted-foreground">
             <Link href="/catalog" className="hover:text-primary transition-colors">Medicines</Link>
-            <Link href="/consultation" className="hover:text-primary transition-colors">Doctors</Link>
+            <Link href="/consultation/video" className="hover:text-primary transition-colors flex items-center gap-1.5">
+              <Video className="w-4 h-4" />
+              Video Consult
+            </Link>
             <Link href="/lab-tests" className="hover:text-primary transition-colors">Blood Tests</Link>
           </div>
         </div>
@@ -107,7 +109,7 @@ export function Navbar() {
             <SheetContent side="right">
               <div className="flex flex-col gap-6 mt-8">
                 <Link href="/catalog" className="text-lg font-medium">Browse Medicines</Link>
-                <Link href="/consultation" className="text-lg font-medium">Talk to Doctor</Link>
+                <Link href="/consultation/video" className="text-lg font-medium">Video Consult</Link>
                 <Link href="/lab-tests" className="text-lg font-medium">Book Blood Test</Link>
                 {user ? (
                   <Link href="/admin/dashboard" className="text-lg font-bold text-primary">Dashboard</Link>
