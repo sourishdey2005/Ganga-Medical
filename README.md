@@ -1,9 +1,9 @@
-# Ganga Medical Stores (Balichak)
+# GANGA MEDICAL STORES(BALICHAK)
 
 Professional Healthcare at Your Doorstep. Trusted pharmacy and digital health platform serving Balichowk and surrounding regions.
 
 ## 🏥 Store Information
-- **Name**: Ganga Medical Stores (Balichak)
+- **Name**: GANGA MEDICAL STORES(BALICHAK)
 - **Location**: BALICHOWK, PASCHIM MIDNAPORE, PIN-721124
 - **Mobile**: +91 9531501959
 - **Drug License No.**: 259S/260SB
@@ -25,18 +25,27 @@ Professional Healthcare at Your Doorstep. Trusted pharmacy and digital health pl
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 
-## 📦 Getting Started
-
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-2. **Run the development server**:
-   ```bash
-   npm run dev
-   ```
-   Open [http://localhost:9002](http://localhost:9002) in your browser.
+## 📈 Future Roadmap (20 Planned Features)
+1. **Firebase Auth**: Real secure customer and staff accounts.
+2. **Real-time Tracking**: Firestore-backed live order status updates.
+3. **Order History**: Personalized customer profiles and one-click re-orders.
+4. **Subscription Refills**: Automated monthly orders for chronic patients.
+5. **Health Locker**: Secure digital storage for prescriptions and reports.
+6. **UPI Integration**: Direct payment gateway for instant checkouts.
+7. **Bengali Localization**: Full interface support for the local language.
+8. **AI Drug Checker**: Intelligent safety alerts for medication interactions.
+9. **WhatsApp Bot**: Automated order updates via WhatsApp API.
+10. **PWA Support**: Installable mobile app experience.
+11. **Lab Scheduling**: Integrated calendar for blood test collection slots.
+12. **Med Reminders**: Automated dosage alerts and notifications.
+13. **Video Consultation**: Real-time video calls with licensed pharmacists.
+14. **Smart Inventory**: AI-driven low-stock prediction and alerts.
+15. **Referral Program**: Community rewards and loyalty discounts.
+16. **Health Blog**: Professional wellness content and local health news.
+17. **Voice Search**: Accessibility-focused search for elderly users.
+18. **Doctor Directory**: Map-based directory of local specialists.
+19. **Vitals Logger**: Personal BP and Sugar tracking dashboard.
+20. **Bulk Discounts**: Volume-based pricing for long-term medications.
 
 ## 🔐 Staff Portal Access
 The management dashboard is accessible via `/login` using the following demo credentials:
