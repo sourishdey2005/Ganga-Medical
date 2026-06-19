@@ -14,9 +14,9 @@
     },
     {
       "id": "lab-test",
-      "description": "Medical lab testing equipment",
-      "imageUrl": "https://picsum.photos/seed/lab1/600/400",
-      "imageHint": "medical laboratory"
+      "description": "Medical blood test process",
+      "imageUrl": "https://picsum.photos/seed/blood-test-1/600/400",
+      "imageHint": "blood test"
     },
     {
       "id": "medicine-bottle",

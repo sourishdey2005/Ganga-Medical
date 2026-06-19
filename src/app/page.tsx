@@ -1,3 +1,4 @@
+
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
@@ -74,12 +75,12 @@ export default function Home() {
 
               <Card className="p-8 border-none bg-gradient-to-br from-teal-600 to-teal-800 text-white relative overflow-hidden group">
                 <div className="relative z-10 space-y-4 max-w-sm">
-                  <h2 className="text-3xl font-bold">Full Body Health Checkup</h2>
-                  <p className="text-teal-100 text-sm">Safe home sample collection for 500+ lab tests and profiles.</p>
+                  <h2 className="text-3xl font-bold">Full Body Blood Test</h2>
+                  <p className="text-teal-100 text-sm">Safe home sample collection for 500+ blood tests and profiles.</p>
                   <button className="bg-white text-teal-700 px-6 py-2 rounded-full font-bold hover:bg-teal-50 transition-colors">View Tests</button>
                 </div>
                 <div className="absolute right-0 bottom-0 opacity-20 group-hover:scale-110 transition-transform duration-500">
-                  <Image src="https://picsum.photos/seed/lab2/400/400" alt="Lab" width={250} height={250} className="object-contain" />
+                  <Image src="https://picsum.photos/seed/blood-test-2/400/400" alt="Blood Test" width={250} height={250} className="object-contain" data-ai-hint="blood test" />
                 </div>
               </Card>
             </div>

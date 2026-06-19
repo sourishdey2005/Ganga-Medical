@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -95,7 +96,7 @@ export function Hero() {
                       <FlaskConical className="w-5 h-5 text-secondary" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold">Lab Tests</p>
+                      <p className="text-sm font-bold">Blood Tests</p>
                       <p className="text-[10px] text-muted-foreground">Home Sample</p>
                     </div>
                   </div>
