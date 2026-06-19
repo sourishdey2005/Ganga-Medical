@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState } from "react"
@@ -258,7 +257,9 @@ export default function PrescriptionUploadPage() {
                 <p className="text-sm text-primary-foreground/80 leading-relaxed">
                   Our pharmacists are available 24/7 to assist with your order.
                 </p>
-                <Button className="w-full bg-white text-primary hover:bg-white/90 font-bold rounded-xl h-11">+91 12345 67890</Button>
+                <Button asChild className="w-full bg-white text-primary hover:bg-white/90 font-bold rounded-xl h-11">
+                  <Link href="tel:+919531501959">+91 9531501959</Link>
+                </Button>
               </div>
             </div>
           </div>

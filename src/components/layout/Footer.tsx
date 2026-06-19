@@ -14,7 +14,7 @@ export function Footer() {
               <span className="font-bold text-xl text-primary">Ganga Medical</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Ganga Medical Store is committed to providing genuine medicines and reliable healthcare services. Your health is our priority.
+              Ganga Medical Stores (Balichak) is committed to providing genuine medicines and reliable healthcare services. Your health is our priority.
             </p>
             <div className="flex gap-4">
               <Link href="#" className="p-2 bg-muted rounded-full hover:bg-primary/10 hover:text-primary transition-colors">
@@ -37,8 +37,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-muted-foreground">
               <li><Link href="/catalog" className="hover:text-primary transition-colors">Browse Medicines</Link></li>
               <li><Link href="/consultation" className="hover:text-primary transition-colors">Talk to Doctors</Link></li>
-              <li><Link href="/lab-tests" className="hover:text-primary transition-colors">Lab Test Booking</Link></li>
-              <li><Link href="/dashboard" className="hover:text-primary transition-colors">My Health Vault</Link></li>
+              <li><Link href="/lab-tests" className="hover:text-primary transition-colors">Blood Test Booking</Link></li>
               <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
             </ul>
           </div>
@@ -59,11 +58,11 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                <span>123 Medical Plaza, Health Street, New Delhi, India</span>
+                <span>BALICHOWK, PASCHIM MIDNAPORE, PIN-721124</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary shrink-0" />
-                <span>+91 12345 67890</span>
+                <span>+91 9531501959</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary shrink-0" />
@@ -74,10 +73,11 @@ export function Footer() {
         </div>
 
         <div className="border-t pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground font-medium uppercase tracking-widest">
-          <p>© 2024 GANGA MEDICAL STORE. ALL RIGHTS RESERVED.</p>
-          <div className="flex gap-6">
-            <span>License: #DRU-123456789</span>
-            <span>GST: 07AAGCM1234Z1Z1</span>
+          <p>© 2024 GANGA MEDICAL STORES(BALICHAK). ALL RIGHTS RESERVED.</p>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <span>License: #259S/260SB</span>
+            <span>PAN: BVCPP1732J</span>
+            <span>GST: 19BVCPP1732J1Z1</span>
           </div>
         </div>
       </div>

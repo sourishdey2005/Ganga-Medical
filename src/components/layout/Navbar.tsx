@@ -40,7 +40,7 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-muted-foreground">
             <Link href="/catalog" className="hover:text-primary transition-colors">Medicines</Link>
             <Link href="/consultation" className="hover:text-primary transition-colors">Doctors</Link>
-            <Link href="/lab-tests" className="hover:text-primary transition-colors">Lab Tests</Link>
+            <Link href="/lab-tests" className="hover:text-primary transition-colors">Blood Tests</Link>
           </div>
         </div>
 
@@ -83,11 +83,11 @@ export function Navbar() {
 
           <div className="h-6 w-px bg-border mx-2 hidden md:block" />
 
-          <Link href="tel:+911234567890" className="hidden lg:flex flex-col items-end gap-0">
+          <Link href="tel:+919531501959" className="hidden lg:flex flex-col items-end gap-0">
             <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">Help?</span>
             <div className="flex items-center gap-1 text-primary font-bold">
               <Phone className="w-3.5 h-3.5" />
-              <span>+91 12345 67890</span>
+              <span>+91 9531501959</span>
             </div>
           </Link>
 
@@ -101,7 +101,7 @@ export function Navbar() {
               <div className="flex flex-col gap-6 mt-8">
                 <Link href="/catalog" className="text-lg font-medium">Browse Medicines</Link>
                 <Link href="/consultation" className="text-lg font-medium">Talk to Doctor</Link>
-                <Link href="/lab-tests" className="text-lg font-medium">Book Lab Test</Link>
+                <Link href="/lab-tests" className="text-lg font-medium">Book Blood Test</Link>
                 {user ? (
                   <Link href="/admin/dashboard" className="text-lg font-bold text-primary">Dashboard</Link>
                 ) : (

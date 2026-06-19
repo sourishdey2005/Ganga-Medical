@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react"
 
 export function WhatsAppButton() {
   const openWhatsApp = () => {
-    window.open("https://wa.me/911234567890?text=Hi Ganga Medical, I need help with medicines.", "_blank")
+    window.open("https://wa.me/919531501959?text=Hi Ganga Medical, I need help with medicines.", "_blank")
   }
 
   return (
