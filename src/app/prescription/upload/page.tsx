@@ -12,6 +12,7 @@ import { Upload, CheckCircle2, Loader2, MapPin, Phone, Mail, User } from "lucide
 import { useToast } from "@/hooks/use-toast"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 export default function PrescriptionUploadPage() {
   const [file, setFile] = useState<File | null>(null)
