@@ -1,14 +1,31 @@
+
 "use client"
 
 import Link from "next/link"
-import { Search, ShoppingCart, User, Menu, Phone } from "lucide-react"
+import { Search, ShoppingCart, User, Menu, Phone, LayoutDashboard, LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { useRouter } from "next/navigation"
 
 export function Navbar() {
   const [isSearchFocused, setIsSearchFocused] = useState(false)
+  const [user, setUser] = useState<any>(null)
+  const router = useRouter()
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("gangarx_user")
+    if (storedUser) {
+      setUser(JSON.parse(storedUser))
+    }
+  }, [])
+
+  const handleLogout = () => {
+    localStorage.removeItem("gangarx_user")
+    setUser(null)
+    router.push("/")
+  }
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -41,18 +58,29 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Search className="w-5 h-5" />
-          </Button>
+          {user ? (
+            <div className="hidden md:flex items-center gap-3">
+              <Link href="/admin/dashboard">
+                <Button variant="outline" className="gap-2 h-10 rounded-xl px-4 font-bold border-primary text-primary hover:bg-primary/5">
+                  <LayoutDashboard className="w-4 h-4" /> Dashboard
+                </Button>
+              </Link>
+              <Button variant="ghost" size="icon" onClick={handleLogout} className="text-muted-foreground hover:text-destructive">
+                <LogOut className="w-5 h-5" />
+              </Button>
+            </div>
+          ) : (
+            <Link href="/login" className="hidden md:block">
+              <Button variant="ghost" className="gap-2 font-bold h-10 rounded-xl px-4">
+                <User className="w-5 h-5" /> Sign In
+              </Button>
+            </Link>
+          )}
           
           <Link href="/cart" className="relative p-2 hover:bg-muted rounded-full transition-colors">
             <ShoppingCart className="w-5 h-5 text-foreground" />
             <span className="absolute -top-0.5 -right-0.5 bg-secondary text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
           </Link>
-
-          <Button variant="ghost" size="icon" className="hidden md:flex">
-            <User className="w-5 h-5 text-foreground" />
-          </Button>
 
           <div className="h-6 w-px bg-border mx-2 hidden md:block" />
 
@@ -75,8 +103,11 @@ export function Navbar() {
                 <Link href="/catalog" className="text-lg font-medium">Browse Medicines</Link>
                 <Link href="/consultation" className="text-lg font-medium">Talk to Doctor</Link>
                 <Link href="/lab-tests" className="text-lg font-medium">Book Lab Test</Link>
-                <Link href="/dashboard" className="text-lg font-medium">My Orders</Link>
-                <Link href="/dashboard/health-vault" className="text-lg font-medium">Health Records</Link>
+                {user ? (
+                  <Link href="/admin/dashboard" className="text-lg font-bold text-primary">Dashboard</Link>
+                ) : (
+                  <Link href="/login" className="text-lg font-bold text-primary">Staff Login</Link>
+                )}
               </div>
             </SheetContent>
           </Sheet>
