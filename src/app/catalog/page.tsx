@@ -30,6 +30,7 @@ import {
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
+import { useCart } from "@/context/CartContext"
 
 const INITIAL_MEDICINES = [
   { id: 1, name: "Paracetamol 500mg", manufacturer: "GSK Pharmaceuticals", rating: 4.8, reviews: 120, category: "OTC", tag: "Best Seller" },
@@ -48,6 +49,7 @@ export default function CatalogPage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [user, setUser] = useState<any>(null)
   const { toast } = useToast()
+  const { addToCart } = useCart()
 
   // Form state for management
   const [isDialogOpen, setIsDialogOpen] = useState(false)
@@ -105,6 +107,20 @@ export default function CatalogPage() {
       tag: med.tag
     })
     setIsDialogOpen(true)
+  }
+
+  const handleBuy = (med: any) => {
+    addToCart({
+      id: med.id,
+      name: med.name,
+      manufacturer: med.manufacturer,
+      category: med.category,
+      tag: med.tag
+    })
+    toast({
+      title: "Added to Cart",
+      description: `${med.name} is ready for order.`,
+    })
   }
 
   const isStaff = user?.role === 'admin' || user?.role === 'pharmacy'
@@ -267,7 +283,11 @@ export default function CatalogPage() {
                       <CheckCircle2 className="w-4 h-4" />
                       In Stock
                     </div>
-                    <Button size="sm" className="bg-secondary hover:bg-secondary/90 shadow-sm gap-2 rounded-xl h-10 px-4 font-bold">
+                    <Button 
+                      size="sm" 
+                      className="bg-secondary hover:bg-secondary/90 shadow-sm gap-2 rounded-xl h-10 px-4 font-bold"
+                      onClick={() => handleBuy(med)}
+                    >
                       <ShoppingCart className="w-4 h-4" /> Buy
                     </Button>
                   </div>
