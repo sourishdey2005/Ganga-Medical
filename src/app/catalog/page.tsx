@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState } from "react"
@@ -8,15 +9,14 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Search, Filter, ShoppingCart, Heart, Info, Star } from "lucide-react"
-import Image from "next/image"
 
 const MOCK_MEDICINES = [
-  { id: 1, name: "Paracetamol 500mg", manufacturer: "GSK Pharmaceuticals", price: 25, rating: 4.8, reviews: 120, category: "OTC", tag: "Best Seller", image: "https://picsum.photos/seed/p1/400/400" },
-  { id: 2, name: "Amoxicillin 250mg", manufacturer: "Cipla Health", price: 145, rating: 4.5, reviews: 85, category: "Prescription", tag: "Prescription Req", image: "https://picsum.photos/seed/p2/400/400" },
-  { id: 3, name: "Multivitamin Gold", manufacturer: "Revital", price: 320, rating: 4.9, reviews: 340, category: "Vitamins", tag: "Top Rated", image: "https://picsum.photos/seed/p3/400/400" },
-  { id: 4, name: "Sugar Free Gold", manufacturer: "Zydus", price: 150, rating: 4.2, reviews: 92, category: "Diabetes", tag: "Sugar Free", image: "https://picsum.photos/seed/p4/400/400" },
-  { id: 5, name: "Dolo 650", manufacturer: "Micro Labs", price: 30, rating: 4.9, reviews: 1200, category: "OTC", tag: "Fast Acting", image: "https://picsum.photos/seed/p5/400/400" },
-  { id: 6, name: "Himalaya Liv 52", manufacturer: "Himalaya Wellness", price: 180, rating: 4.7, reviews: 450, category: "Personal Care", tag: "Herbal", image: "https://picsum.photos/seed/p6/400/400" },
+  { id: 1, name: "Paracetamol 500mg", manufacturer: "GSK Pharmaceuticals", price: 25, rating: 4.8, reviews: 120, category: "OTC", tag: "Best Seller" },
+  { id: 2, name: "Amoxicillin 250mg", manufacturer: "Cipla Health", price: 145, rating: 4.5, reviews: 85, category: "Prescription", tag: "Prescription Req" },
+  { id: 3, name: "Multivitamin Gold", manufacturer: "Revital", price: 320, rating: 4.9, reviews: 340, category: "Vitamins", tag: "Top Rated" },
+  { id: 4, name: "Sugar Free Gold", manufacturer: "Zydus", price: 150, rating: 4.2, reviews: 92, category: "Diabetes", tag: "Sugar Free" },
+  { id: 5, name: "Dolo 650", manufacturer: "Micro Labs", price: 30, rating: 4.9, reviews: 1200, category: "OTC", tag: "Fast Acting" },
+  { id: 6, name: "Himalaya Liv 52", manufacturer: "Himalaya Wellness", price: 180, rating: 4.7, reviews: 450, category: "Personal Care", tag: "Herbal" },
 ]
 
 const CATEGORIES = ["All", "Prescription", "OTC", "Vitamins", "Diabetes", "Personal Care", "Baby Care"]
@@ -68,44 +68,43 @@ export default function CatalogPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredMedicines.map((med) => (
-              <Card key={med.id} className="group border-none shadow-lg hover:shadow-xl transition-all overflow-hidden bg-white rounded-2xl">
-                <div className="relative aspect-square overflow-hidden bg-muted/30">
-                  <Image 
-                    src={med.image} 
-                    alt={med.name} 
-                    fill 
-                    className="object-cover group-hover:scale-110 transition-transform duration-500" 
-                  />
-                  <div className="absolute top-3 left-3 flex flex-col gap-2">
-                    <Badge className="bg-white/90 text-primary border-none backdrop-blur-sm shadow-sm">{med.tag}</Badge>
-                    {med.category === 'Prescription' && (
-                      <Badge variant="destructive" className="border-none shadow-sm flex items-center gap-1">Rx Required</Badge>
-                    )}
-                  </div>
-                  <button className="absolute top-3 right-3 p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-sm text-muted-foreground hover:text-red-500 transition-colors">
-                    <Heart className="w-4 h-4" />
-                  </button>
-                </div>
-                <CardContent className="p-5 space-y-4">
-                  <div className="space-y-1">
-                    <h3 className="font-bold text-lg text-foreground line-clamp-1">{med.name}</h3>
-                    <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">{med.manufacturer}</p>
-                  </div>
-                  
-                  <div className="flex items-center gap-1">
-                    <div className="flex items-center text-yellow-500">
-                      <Star className="w-3.5 h-3.5 fill-current" />
-                      <span className="text-xs font-bold ml-1">{med.rating}</span>
+              <Card key={med.id} className="group border-none shadow-md hover:shadow-lg transition-all bg-white rounded-2xl flex flex-col min-h-[220px]">
+                <CardContent className="p-6 flex flex-col h-full space-y-4">
+                  <div className="flex justify-between items-start">
+                    <div className="flex flex-col gap-1.5">
+                      <Badge className="w-fit bg-primary/10 text-primary hover:bg-primary/20 border-none px-2 py-0.5 text-[10px]">
+                        {med.tag}
+                      </Badge>
+                      {med.category === 'Prescription' && (
+                        <Badge variant="destructive" className="w-fit border-none flex items-center gap-1 text-[9px] px-2 py-0.5">
+                          Rx Required
+                        </Badge>
+                      )}
                     </div>
-                    <span className="text-[10px] text-muted-foreground">({med.reviews} reviews)</span>
+                    <button className="p-2 text-muted-foreground hover:text-red-500 transition-colors">
+                      <Heart className="w-4 h-4" />
+                    </button>
                   </div>
 
-                  <div className="flex items-center justify-between pt-2">
+                  <div className="flex-1 space-y-1.5">
+                    <h3 className="font-bold text-lg text-foreground leading-tight line-clamp-2">{med.name}</h3>
+                    <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">{med.manufacturer}</p>
+                    
+                    <div className="flex items-center gap-1 pt-1">
+                      <div className="flex items-center text-yellow-500">
+                        <Star className="w-3.5 h-3.5 fill-current" />
+                        <span className="text-xs font-bold ml-1">{med.rating}</span>
+                      </div>
+                      <span className="text-[10px] text-muted-foreground">({med.reviews} reviews)</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between pt-4 border-t">
                     <div className="flex flex-col">
                       <span className="text-2xl font-black text-primary">₹{med.price}</span>
-                      <span className="text-[10px] text-muted-foreground">MRP incl. all taxes</span>
+                      <span className="text-[9px] text-muted-foreground uppercase font-bold tracking-tighter">MRP incl. taxes</span>
                     </div>
-                    <Button size="sm" className="bg-secondary hover:bg-secondary/90 shadow-md gap-2 rounded-xl h-10 px-4">
+                    <Button size="sm" className="bg-secondary hover:bg-secondary/90 shadow-sm gap-2 rounded-xl h-10 px-4">
                       <ShoppingCart className="w-4 h-4" /> Add
                     </Button>
                   </div>
